@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    font-family: Raleway, "Myanmar MN", sans-serif;
+    width: 100vw;
+    height: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 52px;
+}
+
+#input-elements {
+    width: 50vw;
+    height: 50px;
+    margin: 10px auto 40px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-task {
+    width: 50vw;
+    height: 35px;
+    flex-grow: 2;
+    border-top: solid #cccbcb 1px;
+    border-left: solid #cccbcb 1px;
+    border-right: solid #cccbcb 1px;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 1.25em;
+    transition: width 300ms ease-out,
+                border-top 500ms ease-out,
+                border-left 500ms ease-out,
+                border-right 500ms ease-out,
+                background-color 300ms ease-out;
+}
+
+#input-task:focus {
+    width: 55vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background-color: #e6e6e6;
+}
+
+#add-task-button {
+    flex-grow: 0;
+    text-wrap: nowrap;
+    height: 35px;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 3px;
+    transition: color 200ms ease-out,
+                background-color 200ms ease-out;
+}
+
+#add-task-button:hover {
+    color: #cccbcb;
+    background-color: black;
+}
+
+hr {
+    width: 75vw;
+}
+
+ul {
+    width: 60vw;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+li {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    line-height: 2;
+    border-bottom: #cccbcb solid 1px;
+    list-style: outside none;
+    margin-left: -5vw;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    border: none;
+    background-color: inherit;
+    margin-left: auto;
+    margin-right: 0;
+    padding-top: 5px;
+}
+
+.delete-btn:hover {
+    opacity: 75%;
+}
+
+span {
+    overflow: auto;
+}
+
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+}
