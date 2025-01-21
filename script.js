@@ -34,6 +34,9 @@ function saveTasks() {
 
 function loadTasks() {
     let taskList = JSON.parse(localStorage.getItem("tasks"));
+    if (!taskList) {
+        return;
+    }
     taskList.forEach((pair) => {
         addTask(pair[0], pair[1]);
     })
